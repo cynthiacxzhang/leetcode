@@ -1,2 +1,5 @@
 Problem Solving Path:
 
+1. Read/Understand inputs and outputs
+2. Determine given & required parameters
+3. 

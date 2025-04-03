@@ -4,6 +4,8 @@
 """
 Brainstorm: 
 
+Input: int
+Output: bool
 
 """
 class Solution(object):

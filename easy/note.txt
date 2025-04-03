@@ -3,4 +3,5 @@ Problem Solving Path:
 1. Read/Understand inputs and outputs
 2. Determine given & required parameters
 3. Write down pseudocode on paper!!! (or in comment)
-4. 
+4. Code without any assistance
+5. Repeat until assistance is needed

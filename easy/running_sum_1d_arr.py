@@ -27,6 +27,15 @@ Constraints:
 1 <= nums.length <= 1000
 -10^6 <= nums[i] <= 10^6"""
 
+
+"""
+Observe:
+
+output[i] = input[i] + output[i-1]
+
+"""
+
+
 class Solution(object):
     def runningSum(self, nums):
         """

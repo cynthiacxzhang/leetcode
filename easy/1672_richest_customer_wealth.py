@@ -31,24 +31,33 @@ Output: 17
 
 """
 
-"""
-Logic: return all [j] that is associated with customer [i]
-- concept: 2D arrays (matrix)
-- array i is the outer array
-- len(i) = number of customers
-- len(i, j) = number of banks associated with customer i
-"""
-
 class Solution(object):
     def maximumWealth(self, accounts):
         """
         :type accounts: List[List[int]]
         :rtype: int
         """
-        
+        """
+        Logic: return all [j] that is associated with customer [i]
+        - concept: 2D arrays (matrix)
+        - array i is the outer array
+        - len(i) = number of customers
+        - len(i, j) = number of banks associated with customer i
+        """
 
-        for i in len(accounts[i]):
-            for j in len(accounts[i][j]):
-                
+        # For loop logic: 
+        """
+        for i in range(rows):
+            for j in range(columns):
+                process(array[i][j])
+        """
+        max_wealth = 0
+
+        for i in range(len(accounts)):          # iteration of rows
+            current_wealth = 0
+            for j in range(len(accounts[i])):   # iteration of columns
+                current_wealth += accounts[i][j]
+            max_wealth = max(current_wealth, max_wealth)
+        return max_wealth
 
 

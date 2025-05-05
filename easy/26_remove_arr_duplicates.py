@@ -10,3 +10,19 @@ Return k.
 
 """
 
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+
+        # NOTE: first mistake - iterating forwards
+        # - this causes an index error since pop() removes items
+        # - when iterating backwards, removing elements from the end doesn't affect earlier indices
+
+        for i in range(len(nums)-1, 0, -1): # start = len(arr)-1, stops when i = 0, increment is -1 
+            if nums[i] == nums[i-1]:
+                nums.pop(i)       # not square brackets since POP is a method 
+
+        return len(nums)

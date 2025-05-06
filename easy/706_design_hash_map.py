@@ -2,8 +2,12 @@
 
 class MyHashMap(object):
 
+    # Note: no collision handling for this solution
+    # - how should we implement separate chaining? open addressing?
+
     def __init__(self):
         self.map = [-1] * 1000001  # Supports keys from 0 to 1,000,000
+        # since keys are always 0 and above, -1 indicates no value at that position
         
 
     def put(self, key, value):
@@ -12,7 +16,7 @@ class MyHashMap(object):
         :type value: int
         :rtype: None
         """
-        self.map[key] = value
+        self.map[key] = value # inserts value at spot "key" in the array
         
 
     def get(self, key):
@@ -20,7 +24,7 @@ class MyHashMap(object):
         :type key: int
         :rtype: int
         """
-        return self.map[key]
+        return self.map[key]    # gets the value at position "key"
         
 
     def remove(self, key):
@@ -28,7 +32,7 @@ class MyHashMap(object):
         :type key: int
         :rtype: None
         """
-        self.map[key] = -1
+        self.map[key] = -1      # sets the value at position "key" back to -1
         
 
 

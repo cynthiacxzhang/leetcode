@@ -30,3 +30,18 @@ class Solution(object):
         Step 3: list is already sorted, search for kth member (index k - 1) and return k
         """
         factors = []
+
+        for i in range(1, int(n/2) + 1): # range 0 to half of n (biggest possible factor other than n itself)
+            if (n % i == 0):
+                factors.append(i)
+
+        # debugging
+        for i in range(len(factors)):
+            print(i)
+
+        factors.append(n)
+
+        if len(factors) < k:
+            return -1
+        else:
+            return factors[k-1]

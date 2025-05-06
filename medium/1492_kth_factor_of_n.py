@@ -5,7 +5,6 @@ You are given two positive integers n and k. A factor of an integer n is defined
 
 Consider a list of all factors of n sorted in ascending order, return the kth factor in this list or return -1 if n has less than k factors.
 
- 
 
 Example 1:
 

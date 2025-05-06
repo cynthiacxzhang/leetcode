@@ -14,3 +14,19 @@ Output: 3
 Explanation: Factors list is [1, 2, 3, 4, 6, 12], the 3rd factor is 3.
 
 """
+
+class Solution(object):
+    def kthFactor(self, n, k):
+        """
+        :type n: int
+        :type k: int
+        :rtype: int
+        """
+
+        # Brainstorm
+        """
+        Step 1: gather all of the factors up to n/2(ceiling), append N itself at list end
+        Step 2: check if list has k factors - if not, return -1
+        Step 3: list is already sorted, search for kth member (index k - 1) and return k
+        """
+        factors = []

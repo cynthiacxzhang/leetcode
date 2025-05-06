@@ -16,3 +16,23 @@ Output: true
 Explanation: The first character in the words "alice", "bob", and "charlie" are 'a', 'b', and 'c', respectively. Hence, s = "abc" is the acronym. 
 
 """
+
+class Solution(object):
+    def isAcronym(self, words, s):
+        """
+        :type words: List[str]
+        :type s: str
+        :rtype: bool
+        """
+        # Logic 
+        """
+        Pop the first character from every item in list: "words"
+        Concatenate them together 
+        Return string s == newly concatenated string 
+        """
+        current = ""
+        for i in range(len(words)):
+            # note: strings are immutable
+            current += (words[i])[0]
+        return current == s
+            

@@ -50,7 +50,7 @@ class Solution(object):
         return -1
 
         
-
+# Better time complexity - using build in method string.startswith
 class Solution2(object):
     def isPrefixOfWord(self, sentence, searchWord):
         """

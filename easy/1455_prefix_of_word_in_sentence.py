@@ -51,4 +51,37 @@ class Solution(object):
 
         
 
+class Solution2(object):
+    def isPrefixOfWord(self, sentence, searchWord):
+        """
+        :type sentence: str
+        :type searchWord: str
+        :rtype: int
+        """
+
+        # Brainstorm
+        """
+        Python method - sentencestring.split
+        - this splits the sentence string into a list of words 
+        - separates based on spaces
         
+        Compare the prefix with every word in the list
+        - for loop through however many words there are in the list
+        - return index of the word in the split words list
+
+        """
+
+        words_list = sentence.split()
+
+        for i in range(len(words_list)):
+            current_word = words_list[i]
+            print(current_word)
+
+            # need the min because 
+            for j in range(len(searchWord)):
+                if current_word.startswith(searchWord):
+                    return i+1  # 1-indexed, not 0 indexed
+            
+            i += 1
+        return -1
+      

@@ -10,7 +10,7 @@ class Solution(object):
 
         # Brainstorm
         """
-        Python method - sentencestring.split
+        Python library method - sentencestring.split
         - this splits the sentence string into a list of words 
         - separates based on spaces
         

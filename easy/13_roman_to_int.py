@@ -29,3 +29,36 @@ class Solution(object):
         :rtype: int
         """
         
+        # Brainstorm: key is to compare values before and after based on size
+
+        # Roman to int dictionary: 
+        roman_map = {
+            'I': 1,
+            'V': 5,
+            'X': 10,
+            'L': 50,
+            'C': 100,
+            'D': 500,
+            'M': 1000
+        }
+
+        value_list = []
+        value = 0
+
+        for i in range(len(s)):
+            value = roman_map[s[i]]
+            value_list.append(value)
+            print(value_list[i])
+
+        integer = 0
+
+        for i in range(len(value_list)-1):
+            if value_list[i] < value_list[i+1]:
+                integer -= value_list[i]
+            else:
+                integer += value_list[i]
+
+        # Add last value - will always be the smallest according to roman rules
+        integer += value_list[-1]
+    
+        return integer

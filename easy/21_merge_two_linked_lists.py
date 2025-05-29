@@ -14,6 +14,8 @@ class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
+        
 # Note: ListNode is a class that initializes a node object with a self.val and a self.next
 #         # - self.val is initializes in the parameter (e.g. if a = ListNode(1), a.val = 1
 #         # - self.next is by default pointing to None (if there's no next items in the list)

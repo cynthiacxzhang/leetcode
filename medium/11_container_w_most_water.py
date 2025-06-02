@@ -38,6 +38,6 @@ class Solution(object):
             - compute current_area again
             - compare current_area to "current_area" and set area = max(current_area, area)
         - move until the indexes of the two pointers meet (how to check this?)
-        - return area
+        - return area (since it'll be max of all computer values)
 
         """

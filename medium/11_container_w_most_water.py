@@ -41,3 +41,5 @@ class Solution(object):
         - return area (since it'll be max of all computed values)
 
         """
+
+        # loop: 

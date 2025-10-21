@@ -1,6 +1,6 @@
 # max subarray problem
 
-
+from typing import List
 
 # brute force solution - nested loop with O(n^2) time complexity
 class Solution:

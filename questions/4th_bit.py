@@ -1,5 +1,4 @@
 # Find the 4th bit of a decimal number
-# IBM oa problem #1
 
 def find_4th_bit(n):
 

@@ -17,4 +17,15 @@ class Solution:
 
         seen = {0:1}
 
+        for num in nums: 
+            prefix += num
+
+            # prefix = k = nums[num]
+            if prefix - k in seen:
+                result += seen[prefix - k]
+
+            seen[prefix] = seen.get(prefix, 0) + 1
+
+        return result
+
         

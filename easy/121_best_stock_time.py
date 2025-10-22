@@ -22,7 +22,6 @@ class Solution:
                 left = right
             else:
                 max_profit = max(max_profit, curr_profit)
-
             
         return max_profit
 

@@ -16,3 +16,24 @@ class Solution(object):
     
 
 # hash map implementation 
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        """
+        x + y = target
+        y = target - x
+
+        have we seen target-x before? track in a map 
+        (not set since sets are unordered and we need to know the index!)
+        """
+
+        seen = dict()
+
+        for i, x in enumerate(nums): 
+            need = target - x
+            if need in seen:
+                return [seen[need], i]
+            seen[x] = i
+        
+    
+
+

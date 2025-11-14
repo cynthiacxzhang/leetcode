@@ -1,16 +1,17 @@
 # max value in an array
 
 def max_arr_val(arr):
-    curr = arr[0]
-    max_val = curr 
+    max_val = arr[0] 
 
     size = len(arr)
 
-    for n in arr:
+    for n in range(size-1):
         if n > size-1:
             break
-        curr = arr[n]
-        max_val = max(curr, max_val)
+        max_val = max(arr[n], max_val)
+        n += 1
     
     return max_val
-        
+
+arr = [6, 12, 5, 4, 10, 3, 9]
+print(max_arr_val(arr))

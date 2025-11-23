@@ -18,11 +18,10 @@ class Solution:
             y = -1 * heapq.heappop(heap) # biggest
             x = -1 * heapq.heappop(heap) # second biggest
 
-            if x == y:
-                continue
-            
+            # if x == y, keep the double pop since they're both destroyed
+
             # if x != y
-            else:
+            if x != y:
                 new = -1*(y - x)
                 heapq.heappush(heap, new)
         

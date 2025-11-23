@@ -9,18 +9,14 @@ class Solution:
             val = -(stone)
             heapq.heappush(heap, val)
 
-        if len(heap) <= 1:
-            last = -1*heap[0]
-            return last
-        
         # some variables
         new, x, y = 0, 0, 0
 
         while len(heap) > 1:
 
             # double pop
-            y = -1 * heappop(heap) # biggest
-            x = -1 * heappop(heap) # second biggest
+            y = -1 * heapq.heappop(heap) # biggest
+            x = -1 * heapq.heappop(heap) # second biggest
 
             if x == y:
                 continue

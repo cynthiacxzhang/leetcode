@@ -2,15 +2,18 @@ class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
         import heapq
 
+        """
         heap = []
 
         # max heap, push -ve values
         for stone in stones:
             val = -(stone)
             heapq.heappush(heap, val)
+        """
 
-        # some variables
-        new, x, y = 0, 0, 0
+        # building max heap using heapify on a list
+        heap = [-s for s in stones]
+        heapq.heapify(heap)
 
         while len(heap) > 1:
 

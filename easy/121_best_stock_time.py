@@ -27,4 +27,24 @@ class Solution:
             
         return max_profit
 
+# better method
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        
+        low, best = prices[0], 0
 
+        for price in prices:
+
+            diff = price - low
+            print(diff)
+
+            # update low
+            if diff <= 0:
+                low = price
+            # 
+            else: 
+                best = max(best, diff)
+        
+        return best
+
+            

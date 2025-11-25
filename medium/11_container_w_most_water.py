@@ -1,45 +1,35 @@
-# Container with the Most Water
-
-"""
-You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
-
-Find two lines that together with the x-axis form a container, such that the container contains the most water.
-
-Return the maximum amount of water a container can store.
-
-Notice that you may not slant the container.
-
-"""
-
-
-class Solution(object):
-    def maxArea(self, height):
-        """
-        :type height: List[int]
-        :rtype: int
-        """
-        
-        # Brainstorm
-        """
-        Input: list of heights
-        Output: volume of water contained between the two tallest (and furthest) bars
-        - e.g. height of the shorter of two bars * distance between bars (in the list)
-
-        Brute Force Method: double iteration through list
-        - iterate twice to get the two highest values in the heights list
-        - compute area between all possible combinations of heights
-        - O(n2) time, not optimal at all
-
-        Optimal Method: two pointers
-        - two pointers, one going right from i = 0, one going left from i = -1
-        - for each pointer movement, compute current_area between the two locations
-            - store this area in a "area" variable
-        - move the smaller pointer value (in whatever direction it applies to) 
-            - compute current_area again
-            - compare current_area to "current_area" and set area = max(current_area, area)
-        - move until the indexes of the two pointers meet (how to check this?)
-        - return area (since it'll be max of all computed values)
-
-        """
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
 
         
+        # helper to compute volume 
+        def get_vol(left, right):
+            
+            width = right - left
+            curr_height = min(height[left], height[right])
+
+            return width * curr_height
+        
+        left, right = 0, len(height) - 1
+        best = 0
+
+        # two pointer logic, start with largest width
+        while left < right:
+
+            curr_vol = get_vol(left, right)
+            best = max(curr_vol, best)
+
+            # always move smaller height - greedy option
+            if height[left] <= height[right]:
+                left += 1
+            else:
+                right -= 1
+        
+        return best
+            
+
+            
+
+
+
+

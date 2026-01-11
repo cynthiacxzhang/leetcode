@@ -6,12 +6,6 @@ class Solution:
         return min(nums)
         """
 
-        class Solution:
-    def findMin(self, nums: List[int]) -> int:
-        """
-        return min(nums)
-        """
-
         # proper solution using binary search
         l, r = 0, len(nums)-1
 

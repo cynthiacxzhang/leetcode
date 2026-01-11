@@ -3,10 +3,12 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         # simplest, but not within time constraints
+        """
         for i, num in enumerate(nums):
             if target == num:
                 return i
         return -1
+        """
 
         # proper solution with binary search
         l, r = 0, len(nums) - 1

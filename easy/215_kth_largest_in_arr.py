@@ -4,7 +4,10 @@ class Solution:
         import heapq   
         heapq.heapify(nums)
 
+        # while there are more than k values in the min-heap
         while len(nums) > k:
-            heapq.heappop(nums)
+            heapq.heappop(nums) # popping root = popping min value 
+        
+        # root that remains is the kth largest 
 
         return heapq.heappop(nums)

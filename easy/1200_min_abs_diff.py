@@ -1,3 +1,4 @@
+# daily 01.26.2026
 class Solution:
     def minimumAbsDifference(self, arr: List[int]) -> List[List[int]]:
 
